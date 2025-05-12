@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Premium Auto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="images/PAlogo.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Premium Auto</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showroom.html">Showroom</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="feedback">
+            <h2>Customer Feedback</h2>
+            
+            <div class="feedback-form">
+                <h3>Share Your Experience</h3>
+                <form id="feedbackForm" action="/submit-feedback" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rating">Rating:</label>
+                        <select id="rating" name="rating" required>
+                            <option value="5">★★★★★ - Excellent</option>
+                            <option value="4">★★★★ - Very Good</option>
+                            <option value="3">★★★ - Good</option>
+                            <option value="2">★★ - Fair</option>
+                            <option value="1">★ - Poor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Comments:</label>
+                        <textarea id="comments" name="comments" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Submit Feedback</button>
+                </form>
+            </div>
+
+            <div class="feedback-list">
+                <h3>Recent Feedback</h3>
+                <div class="feedback-item">
+                    <div class="feedback-header">
+                        <h4>John D. Tamacole</h4>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <p>"Excellent service and amazing car selection. The BMW M5 I purchased exceeded all my expectations!"</p>
+                    <small>Posted on: November 15, 2023</small>
+                </div>
+
+                <div class="feedback-item">
+                    <div class="feedback-header">
+                        <h4>Sarah Morris</h4>
+                        <div class="stars">★★★★</div>
+                    </div>
+                    <p>"Very professional staff. Nice car collections"</p>
+                    <small>Posted on: September 16, 2023</small>
+                </div>
+
+                <div class="feedback-item">
+                    <div class="feedback-header">
+                        <h4>Michael DeSanta</h4>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <p>"Best car showroom in town! The Porsche 911 is a dream come true. Delivery was faster than expected."</p>
+                    <small>Posted on: July 31, 2023</small>
+                </div>
+
+                <div class="feedback-item">
+                    <div class="feedback-header">
+                        <h4>Trevor Phillips</h4>
+                        <div class="stars">★★★★</div>
+                    </div>
+                    <p>"Nice collection. Love their services."</p>
+                    <small>Posted on: July 21, 2023</small>
+                </div>
+
+                <div class="feedback-item">
+                    <div class="feedback-header">
+                        <h4>Franklin Moore</h4>
+                        <div class="stars">★★★★</div>
+                    </div>
+                    <p>"Great car showroom. Delivery was fast, Super convinient."</p>
+                    <small>Posted on: June 3, 2023</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Premium Auto Showroom. All rights reserved.</p>
+    </footer>
+</body>
+</html>

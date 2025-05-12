@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showroom | Premium Auto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="images/PAlogo.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Premium Auto</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showroom.html">Showroom</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="showroom">
+            <h2>Our Showroom</h2>
+            <div class="filters">
+                <select id="brand-filter">
+                    <option value="all">All Brands</option>
+                    <option value="bmw">BMW</option>
+                    <option value="dodge">Dodge</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                    <option value="porsche">Porsche</option>
+                    <option value="rolls-royce">Rolls-Royce</option>
+                    <option value="jeep">Jeep</option>
+                    <option value="aston martin">Aston Martin</option>
+                    <option value="pagani">Pagani</option>
+                    <option value="chevrolet">Chevrolet</option>
+                    <option value="corvette">Corvette</option>
+                    <option value="cadillac escalade">Cadillac Escalade</option>
+                    <option value="lamborghini">Lamborghini</option>
+                    <option value="bugatti">Bugatti</option>
+                    <option value="toyota">Toyota</option>
+                </select>
+                <select id="price-filter">
+                    <option value="all">All Prices</option>
+                    <option value="50000-150000">$50,000 - $150,000</option>
+                    <option value="150000-300000">$150,000 - $300,000</option>
+                    <option value="300000-500000">$300,000 - $500,000</option>
+                    <option value="500000-700000">$500,000 - $700,000</option>
+                    <option value="700000-1000000">$700,000 - $1,000,000</option>
+                    <option value="1000000+">Over $1,000,000</option>
+                </select>
+            </div>
+
+            <div class="car-grid">
+                <div class="car-card" data-brand="bmw" data-price="102000">
+                    <img src="images/bmwm5.jpg" alt="BMW M5">
+                    <h3>BMW M5</h3>
+                    <p class="price">$117,000</p>
+                    <p class="specs">603 HP, 0-60 in 3.2s</p>
+                </div>
+                <div class="car-card" data-brand="dodge" data-price="102000">
+                    <img src="images/DodgeChallengerHellcat.jpg" alt="Dodge Challenger Hellcat">
+                    <h3>Dodge Challenger Hellcat</h3>
+                    <p class="price">$93,000</p>
+                    <p class="specs">707 HP, 0-60 in 3.2s</p>
+                </div>
+                <div class="car-card" data-brand="dodge" data-price="102000">
+                    <img src="images/Rolls-RoyceWraith.jpg" alt="Rolls-Royce Wraith">
+                    <h3>Rolls-Royce Wraith</h3>
+                    <p class="price">$750,000</p>
+                    <p class="specs">632 HP, 0-60 in 3.2s</p>
+                </div>
+                <div class="car-card" data-brand="mercedes" data-price="104000">
+                    <img src="images/MercedesEQS.jpg" alt="Mercedes EQS">
+                    <h3>Mercedes EQS</h3>
+                    <p class="price">$128,000</p>
+                    <p class="specs">516 HP, 350mi range</p>
+                </div>
+                <div class="car-card" data-brand="porsche" data-price="113000">
+                    <img src="images/Porsche911.jpg" alt="Porsche 911">
+                    <h3>Porsche 911</h3>
+                    <p class="price">$122,000</p>
+                    <p class="specs">443 HP, 0-60 in 3.5s</p>
+                </div>
+                <div class="car-card" data-brand="audi" data-price="87000">
+                    <img src="images/AudiRS6.jpg" alt="Audi RS6">
+                    <h3>Audi RS6</h3>
+                    <p class="price">$126,000</p>
+                    <p class="specs">591 HP, 0-60 in 3.5s</p>
+                </div>
+                <div class="car-card" data-brand="bmw" data-price="65000">
+                    <img src="images/LamborghiniUrus.jpg" alt="Lamborghini Urus">
+                    <h3>Lamborghini Urus</h3>
+                    <p class="price">$280,000</p>
+                    <p class="specs">670 HP, 0-60 in 3.6s</p>
+                </div>
+                <div class="car-card" data-brand="mercedes" data-price="56000">
+                    <img src="images/JeepTrackhawk.jpg" alt="Jeep Trackhawk">
+                    <h3>Jeep Trackhawk</h3>
+                    <p class="price">$129,000</p>
+                    <p class="specs">707 HP, 0-60 in 4.6s</p>
+                </div>
+                <div class="car-card" data-brand="mercedes" data-price="56000">
+                    <img src="images/AstonMartinDBSSuperleggera.jpg" alt="Aston Martin DBS Superleggera">
+                    <h3>Aston Martin DBS Superleggera</h3>
+                    <p class="price">$350,000</p>
+                    <p class="specs">715 HP, 0-60 in 4.6s</p>
+                </div>
+                <div class="car-card" data-brand="mercedes" data-price="56000">
+                    <img src="images/PaganiHuayra.jpg" alt="Pagani Huayra">
+                    <h3>Pagani Huayra</h3>
+                    <p class="price">$3,400,000</p>
+                    <p class="specs">789 HP, 0-60 in 4.6s</p>
+                </div>
+                <div class="car-card" data-brand="mercedes" data-price="56000">
+                    <img src="images/ChevroletCamaroZL1.jpg" alt="Chevrolet Camaro ZL1">
+                    <h3>Chevrolet Camaro ZL1</h3>
+                    <p class="price">$90,000</p>
+                    <p class="specs">455 HP, 0-60 in 4.6s</p>
+                </div>
+                <div class="car-card" data-brand="mercedes" data-price="56000">
+                    <img src="images/CorvetteZR1.jpg" alt="Corvette ZR1">
+                    <h3>Corvette ZR1</h3>
+                    <p class="price">$157,000</p>
+                    <p class="specs">460 HP, 0-60 in 4.6s</p>
+                </div>
+                <div class="car-card" data-brand="mercedes" data-price="56000">
+                    <img src="images/BugattiChiron.jpg" alt="Bugatti Chiron">
+                    <h3>Bugatti Chiron</h3>
+                    <p class="price">$4,715,000</p>
+                    <p class="specs">1,479 HP, 0-60 in 4.6s</p>
+                </div>
+                <div class="car-card" data-brand="mercedes" data-price="56000">
+                    <img src="images/CadillacEscaladeV.jpg" alt="Cadillac Escalade V">
+                    <h3>Cadillac Escalade V</h3>
+                    <p class="price">$126,000</p>
+                    <p class="specs">682 HP, 0-60 in 4.4s</p>
+                </div>
+                <div class="car-card" data-brand="mercedes" data-price="56000">
+                    <img src="images/ToyotaSupra.jpg" alt="Toyota Supra">
+                    <h3>Toyota Supra</h3>
+                    <p class="price">$240,000</p>
+                    <p class="specs">362 HP, 0-60 in 4.6s</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Premium Auto Showroom. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple filter functionality
+        document.getElementById('brand-filter').addEventListener('change', filterCars);
+        document.getElementById('price-filter').value;
+            const cars = document.querySelectorAll('.car-card'); 
+
+            cars.forEach(car => {
+                const brand = car.getAttribute('data-brand');
+                const price = parseInt(car.getAttribute('data-price')); 
+
+                let brandMatch = brandFilter === 'all' || brand === brandFilter;
+                let priceMatch = true; 
+
+                if (priceFilter !== 'all') {
+                    const [min, max] = priceFilter.split('-').map(val => 
+                        val.endsWith('+') ? parseInt(val) : val === '150000+' ? 150000 : parseInt(val));
+                    
+                    if (priceFilter.endsWith('+')) {
+                        priceMatch = price >= min;
+                    } else {
+                        priceMatch = price >= min && price <= max;
+                    }
+                } 
+
+                if (brandMatch && priceMatch) {
+                    car.style.display = 'block';
+                } else {
+                    car.style.display = 'none';
+                }
+            });
+    </script>
+</body>
+</html>

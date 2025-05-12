@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | Premium Auto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="images/PAlogo.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Premium Auto</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showroom.html">Showroom</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="admin-login">
+            <h2>Admin Login</h2>
+            <form id="adminLoginForm" action="/admin-login" method="POST">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </section>
+
+        <section class="admin-panel" id="adminPanel" style="display: none;">
+            <h2>Admin Dashboard</h2>
+            
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="inventory">Inventory</button>
+                <button class="tab-btn" data-tab="orders">Orders</button>
+                <button class="tab-btn" data-tab="feedback">Feedback</button>
+                <button class="tab-btn" data-tab="settings">Settings</button>
+            </div>
+
+            <div class="tab-content active" id="inventory">
+                <h3>Car Inventory Management</h3>
+                <button class="btn" id="addCarBtn">Add New Car</button>
+                
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Image</th>
+                            <th>Model</th>
+                            <th>Brand</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="images/bmwm5.jpg" alt="BMW M5"></td>
+                            <td>BMW M5</td>
+                            <td>BMW</td>
+                            <td>$117,000</td>
+                            <td>5</td>
+                            <td>
+                                <button class="btn-small edit-btn">Edit</button>
+                                <button class="btn-small delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="images/MercedesEQS.jpg" alt="Mercedes EQS"></td>
+                            <td>Mercedes EQS</td>
+                            <td>Mercedes</td>
+                            <td>$128,000</td>
+                            <td>10</td>
+                            <td>
+                                <button class="btn-small edit-btn">Edit</button>
+                                <button class="btn-small delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><img src="images/DodgeChallengerDemonSRT.jpg" alt="Dodge Challenger Demon SRT"></td>
+                            <td>Dodge Challenger Demon SRT</td>
+                            <td>Dodge</td>
+                            <td>$93,000</td>
+                            <td>3</td>
+                            <td>
+                                <button class="btn-small edit-btn">Edit</button>
+                                <button class="btn-small delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><img src="images/DodgeChallengerHellcat.jpg" alt="Dodge Challenger Hellcat"></td>
+                            <td>Dodge Charger Hellcat SRT</td>
+                            <td>Dodge</td>
+                            <td>$95,000</td>
+                            <td>14</td>
+                            <td>
+                                <button class="btn-small edit-btn">Edit</button>
+                                <button class="btn-small delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><img src="images/Porsche911.jpg" alt="Porsche 911"></td>
+                            <td>Porsche 911</td>
+                            <td>Porsche</td>
+                            <td>$122,000</td>
+                            <td>11</td>
+                            <td>
+                                <button class="btn-small edit-btn">Edit</button>
+                                <button class="btn-small delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+
+            <div class="tab-content" id="orders">
+                <h3>Customer Orders</h3>
+                
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Car Model</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1001</td>
+                            <td>Samuel Ace</td>
+                            <td>BMW M5</td>
+                            <td>1</td>
+                            <td>$117,000</td>
+                            <td>Shipped</td>
+                            <td>
+                                <button class="btn-small view-btn">View</button>
+                                <button class="btn-small update-btn">Update</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>1002</td>
+                            <td>Sarah Kumi</td>
+                            <td>Mercedes EQS</td>
+                            <td>1</td>
+                            <td>$128,000</td>
+                            <td>Processing</td>
+                            <td>
+                                <button class="btn-small view-btn">View</button>
+                                <button class="btn-small update-btn">Update</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1003</td>
+                            <td>Albert Taylor</td>
+                            <td>Porsche 911</td>
+                            <td>1</td>
+                            <td>$122,000</td>
+                            <td>Delivered</td>
+                            <td>
+                                <button class="btn-small view-btn">View</button>
+                                <button class="btn-small update-btn">Update</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1004</td>
+                            <td>George Addo</td>
+                            <td>BMW M4</td>
+                            <td>1</td>
+                            <td>$125,000</td>
+                            <td>Shipped</td>
+                            <td>
+                                <button class="btn-small view-btn">View</button>
+                                <button class="btn-small update-btn">Update</button>
+                            </td>
+                         </tr>
+                        <tr>
+                            <td>1005</td>
+                            <td>Nana Kwame Donkor</td>
+                            <td>Mercedes GLE</td>
+                            <td>1</td>
+                            <td>$127,000</td>
+                            <td>Delivered</td>
+                            <td>
+                                <button class="btn-small view-btn">View</button>
+                                <button class="btn-small update-btn">Update</button>
+                            </td>
+                          </tr>
+                    </tbody>
+                </table>
+            </div> 
+
+            <div class="tab-content" id="feedback">
+                <h3>Customer Feedback</h3>
+                
+                <div class="feedback-admin-list">
+                    <div class="feedback-admin-item">
+                        <div class="feedback-header">
+                            <h4>John Daniels</h4>
+                            <div class="stars">★★★★★</div>
+                            <span class="date">October 15, 2023</span>
+                        </div>
+                        <p>"Good service and amazing car selection. The BMW M5 I purchased exceeded all my expectations!"</p>
+                        <button class="btn-small delete-btn">Delete</button>
+                    </div> 
+
+                    <div class="feedback-admin-item">
+                        <div class="feedback-header">
+                            <h4>Sarah McHenry</h4>
+                            <div class="stars">★★★★</div>
+                            <span class="date">September 28, 2023</span>
+                        </div>
+                        <p>"The buying process was smooth, though I wish there were more color options for the EQS."</p>
+                        <button class="btn-small delete-btn">Delete</button>
+                    </div>
+                       <div class="feedback-admin-item">
+                            <div class="feedback-header">
+                                <h4>Mac Daniels</h4>
+                                <div class="stars">★★★★</div>
+                                <span class="date">February 1, 2023</span>
+                            </div>
+                            <p>"Excellent service and amazing car selection."</p>
+                            <button class="btn-small delete-btn">Delete</button>
+                        </div>
+                </div>
+            </div>
+<div class="tab-content" id="settings">
+    <h3>Admin Settings</h3>
+                
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label for="admin-email">Admin Email:</label>
+                            <input type="email" id="admin-email" name="admin-email" value="dicksagoejoel@gmail.com">
+                        </div> 
+    
+                        <div class="form-group">
+                            <label for="new-password">New Password:</label>
+                            <input type="password" id="new-password" name="new-password">
+                        </div> 
+    
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password:</label>
+                            <input type="password" id="confirm-password" name="confirm-password">
+                        </div> 
+    
+                        <div class="form-group">
+                            <label for="notifications">Email Notifications:</label>
+                            <select id="notifications" name="notifications">
+                                <option value="enabled">Enabled</option>
+                                <option value="disabled">Disabled</option>
+                            </select>
+                        </div> 
+    
+                        <button type="submit" class="btn">Save Settings</button>
+                    </form>
+                </div>
+            </section>
+        </main> 
+    
+        <footer>
+            <p>&copy; 2023 Premium Auto Showroom. All rights reserved.</p>
+        </footer> 
+    
+        <script>
+            // Simple admin panel toggle (in a real app, this would be server-side authentication)
+            document.getElementById('adminLoginForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                
+                // Very basic client-side check (in real app, this would be server-side)
+                if (username === 'Joel Dick-Sagoe' && password === 'notsidespider') {
+                    document.getElementById('adminPanel').style.display = 'block';
+                    document.getElementById('adminLoginForm').style.display = 'none';
+                } else {
+                    alert('Invalid credentials. Try Joel dick-Sagoe/notsidespider for this demo.');
+                }
+            }); 
+    
+            // Tab functionality
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons and content
+                    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    btn.classList.add('active');
+                    const tabId = btn.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        </script>
+    </body>
+    </html>
